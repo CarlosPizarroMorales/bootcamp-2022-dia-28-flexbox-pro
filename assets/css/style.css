@@ -1,0 +1,155 @@
+body {
+  margin: 0;
+  box-sizing: border;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  color: #181F21;
+} 
+
+/*! OJAZO, por algun motivo */
+/*! los contenedores flex no respectan */
+/*! box-sizing border-box */
+/*! y el padding-x empuja el contenido haciendo */
+/*! overflow del contenedor. */ 
+/*! Pero si funca con margin al contenido */
+
+/*! LAYOUT GENERAL */
+.main__container {
+  display: flex;
+  /* height: 100vh; */
+}
+
+.section__people {
+  flex: 0 1 20%;
+  min-width: 15rem;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  align-items: center;
+  background: #fff;
+  border-right: 1px solid rgba(0, 0, 0, 0.125)
+}
+
+.section__chat {
+  flex: 1 1 auto;
+  background: #ffffff;  
+}
+
+.section__chat {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.125)
+}
+
+
+/*! COMUNES */
+.contact,
+.profile,
+.new-chat {
+  width: 100%;
+  max-width: 100%;
+  /*TODO align-self: stretch; por qué no funca?*/
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  padding: 0.5rem 0rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+}
+
+/*! SECCIóN PEOPLE */
+.contact__img {
+  width: 3rem;
+  height: 3rem;
+  margin-left: 2rem;
+  border: 1px solid transparent;
+  border-radius: 50%;
+}
+
+.profile {
+  justify-content: space-between;
+}
+
+.profile__descriptor {
+  display: flex;
+}
+
+.profile__img {
+  width: 2rem;
+  height: 2rem;
+  margin-left: 2rem;
+  border: 1px solid transparent;
+  border-radius: 50%;
+}
+
+.profile__text p:last-child {
+  font-size: 10px;
+  opacity: 0.5;
+}
+
+.fa {
+  color: rgba(0, 0, 0, 0.75);
+}
+.fa:first-child {
+  margin-right: 0.5rem; 
+}
+
+.fa:last-child {
+  margin-right: 1.5rem; 
+}
+
+
+
+.new-chat {
+  padding: 2rem 0 2rem 0;
+  justify-content: center;
+}
+
+.new-chat button {
+  box-sizing: border-box;
+  background: #a491d2;
+  color: #fff;
+  border: none;
+  padding: 1rem 2.5rem;
+  font-size: 1rem;
+  border: 4px solid #a491d2;
+}
+
+.new-chat button:hover {
+  background: #fff;
+  color: rgb(164, 145, 210);
+  border-radius: 8px;
+}
+
+.contact__text p,
+.profile__text p {
+  margin: 0;
+  margin-left: 1rem;
+  font-family: 'Roboto';
+}
+
+.contact__text p:last-child {
+  font-size: 14px;
+  color: #444749;
+}
+
+/*! SECCIóN CHAT */
+.section__chat img {
+  max-width: 20%;
+}
+
+.section__chat h1 {
+  font-size: 2.8125rem;
+  font-weight: 400;
+  margin: 1rem 0 1rem;
+}
+
+.section__chat p {
+  text-align: center;
+  margin-top: 0;
+}
+
+.bold {
+  font-weight: 700;
+}
